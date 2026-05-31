@@ -1,0 +1,170 @@
+body {
+	padding-top: 70px;
+	font-family: 'Segoe UI', sans-serif;
+	transition: background-color 0.3s, color 0.3s;
+	background-color: #eef2f7;
+}
+
+section:not(.hero) {
+	background-color: white;
+	border-radius: 15px;
+	padding: 40px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   FONDOS DE SECCIONES
+========================= */
+
+.fondo-seccion {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.fondo-testimonios {
+    background: linear-gradient(135deg, #ffffff, #f2f6fa);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.fondo-contacto {
+    background: linear-gradient(135deg, #ffffff, #eef2f7);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* HERO */
+.hero {
+    height: 60vh;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.55),
+            rgba(0,0,0,0.55)
+        ),
+        url("../Imagenes/Negocio1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+/* =========================
+   NAVBAR PROFESIONAL
+========================= */
+
+.navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    gap: 10px;
+}
+
+.nav-link {
+    font-size: 1.15rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link i {
+    margin-right: 6px;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+#themeToggle {
+    font-size: 1.1rem;
+    border-radius: 10px;
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #eaeaea;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f !important;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode .bg-light {
+    background-color: #1a1a1a !important;
+    color: white;
+}
+
+body.dark-mode footer {
+    background-color: #000 !important;
+}
+
+body.dark-mode .form-control,
+body.dark-mode select,
+body.dark-mode textarea {
+    background-color: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #bbb;
+}
