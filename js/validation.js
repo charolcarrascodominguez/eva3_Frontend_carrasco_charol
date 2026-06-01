@@ -1,9 +1,3 @@
-/*
-Autor: Charol Carraco
-Archivo: validation.js
-Responsabilidad: Validación del lado cliente y seguridad básica.
-*/
-
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -11,30 +5,54 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
   const email = document.getElementById("email").value.trim();
   const contact = document.getElementById("contact").value.trim();
   const message = document.getElementById("message").value.trim();
+  const honeypot = document.getElementById("website")?.value;
 
+  const messageBox = document.getElementById("formMessage");
+
+  // Limpia mensajes anteriores
+  messageBox.innerHTML = "";
+
+  // Honeypot anti bots
+  if (honeypot) {
+    return;
+  }
+
+  // Campos obligatorios
   if (!name || !email || !contact || !message) {
-    alert("Completar todos los campos.");
+    showMessage("Completar todos los campos.", "danger");
     return;
   }
 
-  // Nombre: solo letras y espacios
+  // Nombre solo letras
   if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test(name)) {
-    alert("El nombre solo puede contener letras.");
+    showMessage("El nombre solo puede contener letras.", "danger");
     return;
   }
 
-  // Correo válido
+  // Email válido
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    alert("Correo electrónico inválido.");
+    showMessage("Correo electrónico inválido.", "danger");
     return;
   }
 
-  // Teléfono: solo números
+  // Teléfono solo números
   if (!/^\d+$/.test(contact)) {
-    alert("El teléfono solo puede contener números.");
+    showMessage("El teléfono solo puede contener números.", "danger");
     return;
   }
 
-  alert("Formulario enviado correctamente.");
+  // Éxito
+  showMessage("Mensaje enviado correctamente.", "success");
+
   this.reset();
 });
+
+function showMessage(text, type) {
+  const messageBox = document.getElementById("formMessage");
+
+  messageBox.innerHTML = `
+    <div class="alert alert-${type}" role="alert">
+      ${text}
+    </div>
+  `;
+}
