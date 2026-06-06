@@ -1,0 +1,88 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Asesoría Financiera",
+      "description": "Apoyo en planificación financiera y control de costos.",
+      "image": "assets/images/servicio-finanzas.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Marketing Digital",
+      "description": "Estrategias digitales para aumentar ventas.",
+      "image": "assets/images/servicio-marketing.jpg"
+    }
+  ],
+
+  "testimonials": [
+  {
+    "id": 1,
+    "author": "María González",
+    "message": "Excelente servicio, el equipo fue muy profesional y cumplió con todos los plazos."
+  },
+  {
+    "id": 2,
+    "author": "Juan Pérez",
+    "message": "La página web quedó exactamente como la imaginaba. Muy recomendable."
+  },
+  {
+    "id": 3,
+    "author": "Carolina Soto",
+    "message": "Recibí una atención rápida y personalizada durante todo el proyecto."
+  },
+  {
+    "id": 4,
+    "author": "Felipe Rojas",
+    "message": "La calidad del trabajo superó mis expectativas."
+  },
+  {
+    "id": 5,
+    "author": "Valentina Muñoz",
+    "message": "El proceso fue muy claro y siempre estuvieron disponibles para resolver dudas."
+  },
+  {
+    "id": 6,
+    "author": "Rodrigo Silva",
+    "message": "Gran experiencia de principio a fin. El resultado final fue excelente."
+  },
+  {
+    "id": 7,
+    "author": "Camila Torres",
+    "message": "Destaco la creatividad y el compromiso del equipo con cada detalle del proyecto."
+  },
+  {
+    "id": 8,
+    "author": "Sebastián Herrera",
+    "message": "Muy buena comunicación y tiempos de entrega. Totalmente satisfecho."
+  }
+],
+
+  "faq": [
+    {
+      "id": 1,
+      "question": "¿Tiene costo?",
+      "answer": "Sí. El valor de nuestros servicios varía según las necesidades de cada cliente. Ofrecemos asesorías, capacitaciones y acompañamiento especializado. Contáctanos para recibir información y una propuesta adaptada a tu proyecto.."
+    },
+  {
+    "id": 2,
+    "question": "¿Qué tipos de asesorías ofrecen?",
+    "answer": "Brindamos asesorías en gestión empresarial, planificación financiera, marketing digital, desarrollo de negocios, innovación y fortalecimiento de emprendimientos, adaptándonos a las necesidades de cada cliente."
+  },
+  {
+    "id": 3,
+    "question": "¿Cómo puedo solicitar una asesoría?",
+    "answer": "Puedes contactarnos a través de nuestro formulario web, correo electrónico o teléfono. Nuestro equipo evaluará tus requerimientos y te orientará sobre el servicio más adecuado para tu proyecto o empresa."
+  },
+  {
+    "id": 4,
+    "question": "¿Las asesorías son presenciales o virtuales?",
+    "answer": "Ofrecemos modalidades presenciales y virtuales para brindar mayor flexibilidad a nuestros clientes. La disponibilidad dependerá del tipo de servicio y de las necesidades específicas de cada proyecto."
+  }
+  ],
+
+  "about": {
+    "description": "El Centro de Negocios Santiago de SERCOTEC impulsa el crecimiento de micro, pequeñas y medianas empresas mediante asesorías especializadas, capacitaciones, mentorías y acompañamiento estratégico. Nuestro objetivo es fortalecer la gestión empresarial, fomentar la innovación y apoyar el desarrollo sostenible de los emprendedores de la región.."
+  },
+
+  "contact": []
+}

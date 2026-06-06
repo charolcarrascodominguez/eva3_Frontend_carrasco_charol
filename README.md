@@ -1,117 +1,269 @@
-** Evaluacion Final Frontend
+# Landing Page - Centro de Negocios Santiago SERCOTEC
 
-Portal Web LicitaSeguro
-Autor: Charol Carrasco
-Evaluación Final – Desarrollo Frontend
+**Autor:** Charol Carrasco
+**Asignatura:** Desarrollo Frontend
+**Evaluación:** Evaluación Sumativa Unidad 3
+**Framework Utilizado:** Bootstrap 5
+**Tipo de Proyecto:** Frontend con integración de CMS simulado
 
-** Descripción del Proyecto
-LicitaSeguro es un portal web desarrollado como solución frontend para facilitar la consulta de información pública proveniente de la API oficial de Mercado Público de Chile.
 
-El sistema permite:
 
-Consultar licitaciones por fecha y estado.
-Visualizar el detalle completo de una licitación.
-Buscar proveedores mediante RUT.
-Navegar en una interfaz responsiva, accesible y dinámica.
-El desarrollo fue realizado utilizando exclusivamente tecnologías frontend, cumpliendo con los requerimientos establecidos en la evaluación.
+# Descripción del Proyecto
 
-** Tecnologías Utilizadas
-HTML5 (estructura semántica)
-CSS3 (estilos personalizados y variables CSS)
-Bootstrap 5 (componentes reutilizables y diseño responsivo)
-JavaScript ES6 (módulos y Fetch API)
-API Oficial Mercado Público
+Este proyecto corresponde al rediseño y desarrollo de una **Landing Page para el Centro de Negocios Santiago de SERCOTEC**, aplicando buenas prácticas de desarrollo frontend moderno.
 
-** Arquitectura del Proyecto
-El sistema está organizado bajo el principio de separación de responsabilidades, utilizando módulos ES6 para mantener un código limpio, escalable y mantenible.
+La solución fue construida utilizando una arquitectura modular y desacoplada, permitiendo la carga dinámica de contenido desde una API simulada mediante JSON Server. Además, incorpora criterios de accesibilidad, seguridad básica, optimización de rendimiento y diseño responsive orientado a la experiencia del usuario.
 
-** Estructura Modular
-config.js -> Configuración global (BASE_URL, TICKET, paginación).
-api.js -> Centralización del consumo de endpoints.
-utils.js -> Funciones reutilizables (loader, errores, paginación, limpieza).
-licitaciones.js -> Lógica del listado y paginación.
-detalle.js -> Lógica del detalle de licitación.
-proveedores.js -> Lógica de búsqueda y validación de RUT.
-Esta arquitectura permite:
+## Características Principales
 
-Mejor mantenimiento del código.
-Reutilización de funciones.
-Escalabilidad futura.
-Cumplimiento de buenas prácticas frontend.
-** Funcionalidades Implementadas
-    --> Consulta de licitaciones por fecha y estado
-    --> Formateo automático de fecha al formato requerido por la API (ddmmaaaa)
-    --> Paginación automática (10 resultados por página)
-    --> Loader durante el consumo de API
-    --> Validación de campos obligatorios
-    --> Validación completa del RUT chileno
-    --> Manejo de errores del servidor
-    --> Visualización de detalle de licitación
-    --> Diseño completamente responsivo
-    --> Implementación de buenas prácticas de accesibilidad
-    -->
-** Accesibilidad y Usabilidad
-Se aplicaron principios de accesibilidad:
+* Componentes reutilizables.
+* Consumo dinámico de datos desde API.
+* Integración con CMS simulado mediante JSON Server.
+* Diseño responsive adaptable a distintos dispositivos.
+* Implementación de criterios de accesibilidad (WCAG 2.1).
+* Validación segura de formularios.
+* Optimización de carga y rendimiento.
+* Código organizado y modular.
 
-Uso correcto de etiquetas <label>
-role="alert" para mensajes dinámicos
-Navegación por teclado (tabindex)
-Estados de enfoque visibles (focus)
-Contraste adecuado de colores
-Estructura semántica en HTML
-** Manejo de Errores
-El sistema contempla:
 
-Validación de formularios antes de consumir la API.
-Control de respuestas vacías.
-Manejo de errores de red.
-Mensajes claros y comprensibles para el usuario.
-** Consumo de API
-Se utilizan los siguientes endpoints de la API Mercado Público:
 
-Listado de Licitaciones
-Detalle de Licitación
-Búsqueda de Proveedor
-El consumo se realiza mediante fetch() encapsulado en un módulo independiente (api.js), lo que permite centralizar la comunicación con el servidor.
+#  Arquitectura del Proyecto
 
-** Despliegue en Servidor (GitHub Pages)
-El proyecto fue desplegado como aplicación estática utilizando GitHub Pages, lo que permite publicar el sitio de manera gratuita y accesible públicamente.
+La aplicación sigue una estructura modular basada en el principio de **Separación de Responsabilidades (SRP)**, donde cada archivo cumple una función específica.
 
-** Proceso de Despliegue
-Creación de repositorio en GitHub.
-Subida del código fuente al repositorio.
-Activación de GitHub Pages desde la rama principal (main).
-Generación de URL pública del proyecto.
-Este método es ideal para aplicaciones frontend puras, ya que:
+| Archivo            | Función                                 |
+|  |  |
+| index.html       | Vista principal de la aplicación        |
+| css/styles.css   | Estilos personalizados                  |
+| js/api.js        | Comunicación con la API                 |
+| js/components.js | Creación de componentes reutilizables   |
+| js/main.js       | Orquestación principal de la aplicación |
+| js/validation.js | Validación y seguridad del formulario   |
+| db.json          | Base de datos simulada (CMS)            |
 
-Permite versionado del código.
-Facilita la distribución pública.
-Soporta módulos ES6.
-No requiere backend ni configuración adicional de servidor.
---> Cómo Ejecutar Localmente
-Clonar o descargar el proyecto.
-Configurar un TICKET válido en config.js.
-Ejecutar el proyecto mediante un servidor local (ejemplo: Live Server en VS Code).
-Acceder desde http://localhost.
-** No se recomienda abrir los archivos directamente con doble clic (file://), ya que el proyecto utiliza módulos ES6.
 
-    --> Diseño UI/UX
-    --> Responsive Design
-    --> Interactividad mediante eventos
-    --> Validaciones de formularios
-    --> Consumo de endpoints
-    --> Manejo de errores
-    --> Accesibilidad
-    --> Arquitectura modular
-    --> Despliegue en servidor
 
-** Conclusión
-LicitaSeguro cumple con los requerimientos técnicos y funcionales establecidos en la evaluación, implementando una solución frontend estructurada, accesible y alineada con buenas prácticas modernas de desarrollo web.
+# Estructura del Proyecto
 
-Si quieres, ahora puedo prepararte un pequeño guion de defensa oral para explicar:
 
-Arquitectura
-Consumo de API
-Despliegue en GitHub Pages
-Decisiones de diseño
-Eso te puede ayudar bastante al momento de presentar.
+eva3_Frontend_carrasco_charol-main/
+│
+├── assets/
+│   └── images/
+│
+├── css/
+│   └── styles.css
+│
+├── js/
+│   ├── api.js
+│   ├── components.js
+│   ├── main.js
+│   └── validation.js
+│
+├── Imagenes/
+├── db.json
+├── index.html
+└── README.md
+
+
+
+
+# Componentes Reutilizables
+
+## 1. Tarjeta de Servicios
+
+Cada servicio es generado dinámicamente e incluye:
+
+* Imagen.
+* Título.
+* Descripción.
+* Botón "Contáctanos".
+* Autocompletado del servicio seleccionado en el formulario.
+
+
+
+## 2. Carrusel de Testimonios
+
+Características:
+
+* Generación dinámica desde API.
+* Diseño responsive.
+* Navegación accesible.
+* Uso de atributos ARIA para mejorar la experiencia de usuarios con tecnologías asistivas.
+
+
+
+## 3. Preguntas Frecuentes (FAQ)
+
+Implementado mediante:
+
+* Acordeón Bootstrap.
+* Carga dinámica desde endpoint.
+* Fácil escalabilidad para nuevos contenidos.
+
+
+
+## 4. Formulario de Contacto
+
+Incluye:
+
+* Validación personalizada.
+* Campos obligatorios.
+* Protección básica contra bots mediante Honeypot.
+* Mensajes dinámicos accesibles.
+
+
+
+# Consumo de API
+
+Para simular un CMS se utilizó **JSON Server**.
+
+## URL Base
+
+
+http://localhost:3000
+
+
+## Endpoints Consumidos
+
+
+/services
+/testimonials
+/faq
+/about
+
+
+## Ejemplo de Consumo
+
+javascript
+const API_URL = "http://localhost:3000";
+
+async function fetchData(endpoint) {
+  const response = await fetch(${API_URL}/${endpoint});
+  return await response.json();
+}
+
+
+### Tecnologías Utilizadas
+
+* Método HTTP: GET.
+* Respuesta en formato JSON.
+* Programación asíncrona con async/await.
+* Manejo básico de errores.
+
+
+
+# Accesibilidad Implementada
+
+El proyecto incorpora recomendaciones basadas en **WCAG 2.1**:
+
+* Etiquetas (label) correctamente asociadas a los campos.
+* Uso de aria-live para mensajes dinámicos.
+* Atributos aria-label en elementos interactivos.
+* Roles semánticos como:
+
+  * banner
+  * main
+  * contentinfo
+* Imágenes con atributo alt.
+* Navegación clara y accesible.
+* Contraste adecuado para mejorar la legibilidad.
+
+
+
+# 🔒 Seguridad Implementada
+
+Aunque se trata de una aplicación frontend, se incorporaron medidas preventivas para mejorar la seguridad:
+
+* Validación mediante expresiones regulares.
+* Sanitización básica contra ataques XSS.
+* Honeypot anti bots.
+* Prevención de envíos múltiples.
+* Validación de campos obligatorios.
+
+## Ejemplo de Sanitización
+
+javascript
+function sanitize(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+
+
+
+
+# Buenas Prácticas Aplicadas
+
+Durante el desarrollo se implementaron prácticas orientadas a la mantenibilidad y escalabilidad del proyecto:
+
+* Arquitectura modular.
+* Componentes reutilizables.
+* Consumo desacoplado de API.
+* Uso de async/await.
+* Validaciones del lado cliente.
+* Control de versiones con Git.
+
+Estas prácticas permiten obtener una solución más robusta, mantenible y alineada con estándares actuales de desarrollo frontend.
+
+
+
+# Control de Versiones
+
+El proyecto fue gestionado utilizando Git y GitHub.
+
+Características:
+
+* Repositorio público.
+* Commits progresivos.
+* Historial documentado.
+* Versionado incremental durante el desarrollo.
+
+**Repositorio:**
+
+https://github.com/charolcarrascodominguez/eva3_Frontend_carrasco_charol
+
+
+
+
+# Instalación y Ejecución
+
+## 1. Instalar Node.js
+
+https://nodejs.org
+
+## 2. Instalar JSON Server
+
+
+npm install -g json-server
+
+
+## 3. Ejecutar la API
+
+
+json-server --watch db.json --port 3000
+
+
+## 4. Ejecutar la Aplicación
+
+Abrir el archivo:
+
+index.html
+
+
+
+# Conclusión
+
+Este proyecto cumple con los requerimientos definidos para la evaluación, incorporando conceptos fundamentales del desarrollo frontend moderno:
+
+* Uso de Bootstrap 5.
+* Consumo dinámico de datos.
+* Componentes reutilizables.
+* Accesibilidad.
+* Seguridad básica.
+* Optimización de rendimiento.
+* Arquitectura modular.
+* Documentación técnica.
+
+Como resultado, se obtiene una solución funcional, escalable y centrada en el usuario, alineada con las buenas prácticas actuales de desarrollo web.
